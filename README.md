@@ -15,7 +15,9 @@ src/make_dummy_data.py     simulated CAN traffic generator
 src/feature_extraction.py  turns raw messages into model features
 src/train_model.py         trains, compares and saves the model
 src/detect_attacks.py      ML + rule-based detection and severity
+src/export_report.py       exports a sample detection report
 app.py                     Streamlit dashboard
+reports/                   evaluation report, confusion matrix, sample report
 ```
 
 ## How to run
@@ -26,6 +28,12 @@ python src/train_model.py
 streamlit run app.py
 ```
 
+## Results so far
+- Random Forest was selected over the Decision Tree (higher macro F1).
+- Scores on the simulated data are near-perfect because the simulated attacks are easy to separate. They will be re-evaluated on the real dataset.
+
 ## Current status and limitations
-- Results so far use simulated data, so the near-perfect scores are expected and will be re-evaluated on the real dataset.
-- Integration with the Module 1 (data collection and preprocessing) dataset is pending.s
+- Integration with the Module 1 (data collection and preprocessing) dataset is pending.
+- This is a dataset-based simulation, not a real-time vehicle security system.
+- Replay attacks are not covered yet.
+- Planned next: an Isolation Forest anomaly layer and evaluation on the real dataset.
