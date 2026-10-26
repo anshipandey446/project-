@@ -1,0 +1,47 @@
+CLASS COUNTS (imbalance check):
+label
+Normal    19194
+DoS       16670
+Fuzzy      5001
+
+=== Decision Tree ===
+Accuracy 0.9999 | Macro Precision 0.9999 | Macro Recall 0.9997 | Macro F1 0.9998
+              precision    recall  f1-score   support
+
+         DoS       1.00      1.00      1.00      3334
+       Fuzzy       1.00      1.00      1.00      1000
+      Normal       1.00      1.00      1.00      3839
+
+    accuracy                           1.00      8173
+   macro avg       1.00      1.00      1.00      8173
+weighted avg       1.00      1.00      1.00      8173
+
+=== Random Forest ===
+Accuracy 1.0000 | Macro Precision 1.0000 | Macro Recall 1.0000 | Macro F1 1.0000
+              precision    recall  f1-score   support
+
+         DoS       1.00      1.00      1.00      3334
+       Fuzzy       1.00      1.00      1.00      1000
+      Normal       1.00      1.00      1.00      3839
+
+    accuracy                           1.00      8173
+   macro avg       1.00      1.00      1.00      8173
+weighted avg       1.00      1.00      1.00      8173
+
+SELECTED MODEL: Random Forest (highest macro F1)
+
+FEATURE IMPORTANCE (if one is ~1.0, investigate leakage):
+can_id        0.183
+b5            0.130
+id_delta_t    0.095
+b6            0.094
+b0            0.087
+b1            0.086
+id_rate       0.081
+b7            0.055
+b3            0.045
+b2            0.040
+b4            0.035
+msg_rate      0.034
+delta_t       0.034
+dlc           0.000
