@@ -1,0 +1,10 @@
+ISOLATION FOREST ANOMALY LAYER (trained on Normal traffic only)
+
+% of each real class flagged as anomaly:
+label
+DoS       99.97
+Fuzzy     99.70
+Normal     0.96
+
+Reading: DoS and Fuzzy should be high (attacks caught).
+Normal should be low (a high Normal value means false alarms).

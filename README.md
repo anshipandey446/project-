@@ -8,6 +8,7 @@ A dataset-based, simulated CAN intrusion detection platform. It is not connected
 - Combines the ML model with rule-based checks (blocklisted ID, too-fast repetition)
 - Assigns each message a status and a severity (High / Medium / Low)
 - Streamlit dashboard with charts, filters, alert banner, alert log and CSV report
+- Isolation Forest anomaly layer (trained on normal traffic only) to flag unusual traffic
 
 ## Project structure
 ```
@@ -36,4 +37,4 @@ streamlit run app.py
 - Integration with the Module 1 (data collection and preprocessing) dataset is pending.
 - This is a dataset-based simulation, not a real-time vehicle security system.
 - Replay attacks are not covered yet.
-- Planned next: an Isolation Forest anomaly layer and evaluation on the real dataset.
+- - Planned next: evaluation on the real dataset
